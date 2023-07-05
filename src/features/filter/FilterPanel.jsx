@@ -1,9 +1,9 @@
-import { Badge } from "../UI/Badge";
-import { Card } from "../UI/Card";
-import { Stack } from "../UI/Stack";
+import { Badge } from "../../UI/Badge";
+import { Card } from "../../UI/Card";
+import { Stack } from "../../UI/Stack";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFilter, clearFilter } from "../store/filters/filter-actions";
-import { selectFilters } from "../store/filters/filter-selectors";
+import { removeFilter, clearFilter, selectFilters } from "./filter-slice";
+
 const FilterPanel = () => {
   const dispatch = useDispatch();
   const currentFilters = useSelector(selectFilters);
@@ -33,4 +33,4 @@ const FilterPanel = () => {
   );
 };
 
-export { FilterPanel };
+export {FilterPanel}
